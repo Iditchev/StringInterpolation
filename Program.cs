@@ -19,18 +19,18 @@ namespace SleepData
             {
                 // create data file
 
-                 // ask a question
+                // ask a question
                 Console.WriteLine("How many weeks of data is needed?");
                 // input the response (convert to int)
                 int weeks = int.Parse(Console.ReadLine());
 
-                 // determine start and end date
+                // determine start and end date
                 DateTime today = DateTime.Now;
                 // we want full weeks sunday - saturday
                 DateTime dataEndDate = today.AddDays(-(int)today.DayOfWeek);
                 // subtract # of weeks from endDate to get startDate
                 DateTime dataDate = dataEndDate.AddDays(-(weeks * 7));
-                
+
                 // random number generator
                 Random rnd = new Random();
 
@@ -56,29 +56,41 @@ namespace SleepData
             }
             else if (resp == "2")
             {
-                
-                         // read data from file
-                         StreamReader sr = new StreamReader("data.txt");
-                         while (!sr.EndOfStream)
-                         {
-                             string line = sr.ReadLine();
-                             string[] arr = line.Split(',');
-                             string hours = arr[1];
-                             string [] numbers = hours.Split('|');
-                             int[] newnumbers = Array.ConvertAll(numbers, int.Parse);
-                             double total = newnumbers.Sum();
-                             double average = (total/7);
 
-                             // display array data
-                             Console.WriteLine("Week Of {0:MMM}, {0:dd}, {0:yyyy}",arr[0]);
-                             Console.WriteLine(" Mo Tu We Th Fr Sa Su Tot Avg");
-                             Console.WriteLine(" -- -- -- -- -- -- --");
-                             Console.WriteLine("{0,1}{1,1}{2,1}{3,1}{4,1}{5,1}{6,1}{7,1},{8,1}",hours[0],hours[1],hours[2],hours[3],hours[4],hours[5],hours[6], total, average);
-                             
-                         }
-                         sr.Close();
-                         
-                     }
+                // read data from file
+                StreamReader sr = new StreamReader("data.txt");
+                while (!sr.EndOfStream)
+                {
+                    string line = sr.ReadLine();
+                    string[] arr = line.Split(',');
+                    string week = arr[0];
+                    DateTime sleepweek = Convert.ToDateTime(week);
+                    string hours = arr[1];
+                    string[] numbers = hours.Split('|');
+                    int[] newnumbers = Array.ConvertAll(numbers, int.Parse);
+                    double total = newnumbers.Sum();
+                    double average = (total / 7);
+
+                    // display array data
+                    
+                    Console.WriteLine("Week Of {0:MMM}, {0:dd}, {0:yyyy}", sleepweek);
+                    Console.WriteLine(" Mo Tu We Th Fr Sa Su Tot Avg");
+                    Console.WriteLine(" -- -- -- -- -- -- -- --- ---");
+                    Console.WriteLine("{0,3}{1,3}{2,3}{3,3}{4,3}{5,3}{6,3} {7,3} {8,4:N1}", numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5], numbers[6], total, average);
+
+                }
+                sr.Close();
+
+            }
+
+
+
+
+        }
+
+
+    }
+}
                      
                      
                          
@@ -88,5 +100,5 @@ namespace SleepData
 
             }
         }
-    }
-}
+    
+
