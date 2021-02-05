@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 
 namespace SleepData
 {
@@ -63,18 +64,20 @@ namespace SleepData
                              string line = sr.ReadLine();
                              string[] arr = line.Split(',');
                              string hours = arr[1];
-                             string[] sleephours = hours.Split('|');
+                             string [] numbers = hours.Split('|');
+                             int[] newnumbers = Array.ConvertAll(numbers, int.Parse);
+                             double total = newnumbers.Sum();
+                             double average = (total/7);
 
                              // display array data
-                             Console.WriteLine("Course: {0}, Grade: {1}", arr[0], arr[1]);
-                             // add to accumulators
-                             gradePoints += arr[1] == "A" ? 4 : arr[1] == "B" ? 3 : arr[1] == "C" ? 2 : arr[1] == "D" ? 1 : 0;
-                             count += 1;
+                             Console.WriteLine("Week Of {0:MMM}, {0:dd}, {0:yyyy}",arr[0]);
+                             Console.WriteLine(" Mo Tu We Th Fr Sa Su Tot Avg");
+                             Console.WriteLine(" -- -- -- -- -- -- --");
+                             Console.WriteLine("{0,1}{1,1}{2,1}{3,1}{4,1}{5,1}{6,1}{7,1},{8,1}",hours[0],hours[1],hours[2],hours[3],hours[4],hours[5],hours[6], total, average);
+                             
                          }
                          sr.Close();
-                         // calculate GPA
-                         double GPA = (double)gradePoints / count;
-                         Console.WriteLine("GPA: {0:n2}", GPA);
+                         
                      }
                      
                      
