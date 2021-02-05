@@ -1,0 +1,15 @@
+/Users/izabelditchev/Projects/StringInterpolation/bin/Debug/net5.0/StringInterpolation.deps.json
+/Users/izabelditchev/Projects/StringInterpolation/bin/Debug/net5.0/StringInterpolation.runtimeconfig.json
+/Users/izabelditchev/Projects/StringInterpolation/bin/Debug/net5.0/StringInterpolation.runtimeconfig.dev.json
+/Users/izabelditchev/Projects/StringInterpolation/bin/Debug/net5.0/StringInterpolation.dll
+/Users/izabelditchev/Projects/StringInterpolation/bin/Debug/net5.0/ref/StringInterpolation.dll
+/Users/izabelditchev/Projects/StringInterpolation/bin/Debug/net5.0/StringInterpolation.pdb
+/Users/izabelditchev/Projects/StringInterpolation/obj/Debug/net5.0/StringInterpolation.csprojAssemblyReference.cache
+/Users/izabelditchev/Projects/StringInterpolation/obj/Debug/net5.0/StringInterpolation.GeneratedMSBuildEditorConfig.editorconfig
+/Users/izabelditchev/Projects/StringInterpolation/obj/Debug/net5.0/StringInterpolation.AssemblyInfoInputs.cache
+/Users/izabelditchev/Projects/StringInterpolation/obj/Debug/net5.0/StringInterpolation.AssemblyInfo.cs
+/Users/izabelditchev/Projects/StringInterpolation/obj/Debug/net5.0/StringInterpolation.csproj.CoreCompileInputs.cache
+/Users/izabelditchev/Projects/StringInterpolation/obj/Debug/net5.0/StringInterpolation.dll
+/Users/izabelditchev/Projects/StringInterpolation/obj/Debug/net5.0/ref/StringInterpolation.dll
+/Users/izabelditchev/Projects/StringInterpolation/obj/Debug/net5.0/StringInterpolation.pdb
+/Users/izabelditchev/Projects/StringInterpolation/obj/Debug/net5.0/StringInterpolation.genruntimeconfig.cache

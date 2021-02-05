@@ -77,7 +77,7 @@ namespace SleepData
                     Console.WriteLine(" Mo Tu We Th Fr Sa Su Tot Avg");
                     Console.WriteLine(" -- -- -- -- -- -- -- --- ---");
                     Console.WriteLine("{0,3}{1,3}{2,3}{3,3}{4,3}{5,3}{6,3} {7,3} {8,4:N1}", numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5], numbers[6], total, average);
-
+                    Console.WriteLine();
                 }
                 sr.Close();
 
